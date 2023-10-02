@@ -1,6 +1,7 @@
 {
   "application": {
     "title": "Fleuronic",
+    "head": "assets/head.html",
     "icon": "assets/favicon.png"
   },
   "dependencies": {
