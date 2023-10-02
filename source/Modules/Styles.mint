@@ -1,7 +1,6 @@
 module Ui.Styles {
   const INLINE = "inline-block"
     |> Value.for("display")
-    |> Map.merge(20 |> Value.set("width", "px"))
     |> Map.merge(20 |> Value.set("height", "px"))
   
   const FLEX = "flex"
