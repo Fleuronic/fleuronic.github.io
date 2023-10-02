@@ -18,7 +18,7 @@ component Banner {
         <{<<#MARKDOWN
           From startups to Fortune 500 companies, Fleuronic has a **proven track record**
           in mobile software development. We work with your team to deliver your dream,
-          from start to finsh and beyond.
+          from start to finish and beyond.
           
           Take a look at what we’ve done so far.
         MARKDOWN}>
