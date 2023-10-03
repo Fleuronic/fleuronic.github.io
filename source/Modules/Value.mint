@@ -1,15 +1,26 @@
 module Value {
-  fun for(value: String, key: String) {
+  fun for(
+    value: String,
+    key: String 
+  ) {
     Map.empty() |> Map.set(key, value)
   }
   
-  fun set(number: Number, key: String, unit: String) {
+  fun of(
+    key: String, 
+    number: Number, 
+    unit: String
+  ) {
     "#{number}#{unit}" |> Value.for(key)
   }
 
-  fun setMaybe(number: Maybe(Number), key: String, unit: String) {
+  fun ofMaybe(
+    key: String, 
+    number: Maybe(Number), 
+    unit: String
+  ) {
     number
-    |> Maybe.andThen((number: Number) { set(number, key, unit) |> Maybe.just })
+    |> Maybe.map((number: Number) { of(key, number, unit) })
     |> Maybe.withDefault(Map.empty())
   }
 }
