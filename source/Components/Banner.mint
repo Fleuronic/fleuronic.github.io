@@ -25,7 +25,7 @@ component Banner.Text {
   fun render: Html {
     <>
       <h1>
-        "Apps built to flourish. 🌼"
+        "Apps built to flourish."
       </h1>
       <{<<#MARKDOWN
         From startups to Fortune 500 companies, Fleuronic has a **proven track record**
