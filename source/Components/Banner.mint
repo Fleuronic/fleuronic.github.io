@@ -1,14 +1,16 @@
 component Banner {
+  const WIDTH = 2000
   const HEIGHT = 600
   const PADDING = 20
 
   fun render: Html {
     <div style={Ui.Styles.flex(Direction::Horizontal)}>
-      <div style={Ui.Styles.flex(
-        Direction::Vertical,
-        Maybe.just(2000),
-        Maybe.just(HEIGHT),
-        Maybe.just(PADDING))}>
+      <div style={
+        Ui.Styles.flex(
+          Direction::Vertical,
+          Maybe.just(WIDTH),
+          Maybe.just(HEIGHT),
+          Maybe.just(PADDING))}>
         <Banner.Text/>
         <Banner.Buttons/>
       </div>
@@ -23,10 +25,7 @@ component Banner.Text {
   fun render: Html {
     <>
       <h1>
-        "Apps built to flourish."
-        <Ui.Icon
-          icon={@svg(../../assets/logo.svg)}
-          size={Ui.Size::Em(1)}/>
+        "Apps built to flourish. 🌼"
       </h1>
       <{<<#MARKDOWN
         From startups to Fortune 500 companies, Fleuronic has a **proven track record**
@@ -46,7 +45,7 @@ component Banner.Buttons {
         iconBefore={Ui.Icons:ORGANIZATION}
         label="Client Work"/>
       <Ui.Button 
-        iconBefore={Ui.Icons:PACKAGE}
+        iconBefore={Ui.Icons:OCTOFACE}
         label="Open Source"/>
     </div> 
   }
