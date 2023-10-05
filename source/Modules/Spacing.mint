@@ -1,3 +1,3 @@
 module Ui.Spacing {
-  const DEFAULT = 8
+  const DEFAULT = 16
 }

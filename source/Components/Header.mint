@@ -4,7 +4,7 @@ component Header {
 	style base {
 		color: #{Ui.Colors:FLEURONIC_BLUE};
 		background-color: white;
-		padding: 8px 0px 8px 20px;		
+		padding: 18px 16px 8px 32px;		
 	}	
 	
 	style button {
@@ -12,19 +12,31 @@ component Header {
 			background-color: #{Ui.Colors:FLEURONIC_BLUE};
 		}
 	}
-
 	
 	fun render: Html {
 		<div::base>
 			<Ui.Header
-				icon={Ui.Icons:THREE_BARS}
-				size={Ui.Size::Px(SIZE)}
-				brand={<img src={@asset(../../assets/icon_wordmark.png)} style="width: 16vw;"/>}
-				breakpoint={0}
-				items={[servicesItem, blogItem, contactItem]}/>
+				brand={brand}
+				items={[aboutItem, servicesItem, blogItem, contactItem]}
+				breakpoint={0}/>
 		</div>	
 	}
+	
+	get brand {
+		<img 
+			src={@asset(../../assets/icon_wordmark.png)} 
+			style="width: 16vw;"/>
+	}
 
+	get aboutItem {
+		Ui.NavItem::Link(
+			iconBefore: <{}>,
+			iconAfter: <{}>,
+			target: "",
+			label: "About",
+			href: "/about")
+	}
+	
 	get servicesItem {
 		Ui.NavItem::Link(
 			iconBefore: <{}>,

@@ -1,7 +1,7 @@
 component Banner {
   const WIDTH = 2000
-  const HEIGHT = 600
-  const PADDING = 20
+  const HEIGHT = 500
+  const PADDING = 32
 
   fun render: Html {
     <div style={Ui.Styles.flex(Direction::Horizontal)}>
@@ -39,12 +39,18 @@ component Banner.Text {
 }
 
 component Banner.Buttons {
+  style base {
+    > button {
+      background-color: gray;
+    }
+  }
+  
   fun render: Html {
-    <div style={Ui.Styles:ROW}>
-      <Ui.Button 
+    <div::base style={Ui.Styles:ROW}>
+      <Ui.Button
         iconBefore={Ui.Icons:ORGANIZATION}
         label="Client Work"/>
-      <Ui.Button 
+      <Ui.Button
         iconBefore={Ui.Icons:OCTOFACE}
         label="Open Source"/>
     </div> 
