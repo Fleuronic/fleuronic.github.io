@@ -6,9 +6,7 @@ module Ui.Styles {
     |> Value.for("display")
     |> Map.set("justify-content", "center")
 
-  const ROW = FLEX
-
-  fun flex (direction: Direction) {
+  fun flex(direction: Direction) {
     FLEX
     |> Map.set("flex-direction", Direction.flexDirection(direction))
     |> Map.set("align-items", Direction.alignItems(direction))
