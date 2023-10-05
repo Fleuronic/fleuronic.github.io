@@ -2,7 +2,7 @@ component Banner {
   const WIDTH = 2000
   const HEIGHT = 500
   const PADDING = 32
-
+  
   fun render: Html {
     <div style={Ui.Styles.flex(Direction::Horizontal)}>
       <div style={
@@ -41,7 +41,7 @@ component Banner.Text {
 component Banner.Buttons {
   style base {
     > button {
-      background-color: gray;
+      background-color: var(--tint);
     }
   }
   

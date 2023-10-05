@@ -1,5 +1,5 @@
 module Ui.Colors {
-  const TEXT = "#555"
-  const LABEL = "white"
+  const WHITE = "white"
+  const DARK_GRAY = "#555"
   const FLEURONIC_BLUE = "#8cb1db"
 }
