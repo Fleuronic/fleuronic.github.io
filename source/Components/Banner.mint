@@ -1,16 +1,13 @@
 component Banner {
-  const WIDTH = 2000
-  const HEIGHT = 500
-  const PADDING = 32
+  style base {
+    width: 2000px;
+    height: 500px;
+    padding: 32px;
+  }
   
   fun render: Html {
     <div style={Ui.Styles.flex(Direction::Horizontal)}>
-      <div style={
-        Ui.Styles.flex(
-          Direction::Vertical,
-          Maybe.just(WIDTH),
-          Maybe.just(HEIGHT),
-          Maybe.just(PADDING))}>
+      <div::base style={Ui.Styles.flex(Direction::Vertical)}>
         <Banner.Text/>
         <Banner.Buttons/>
       </div>
@@ -40,13 +37,19 @@ component Banner.Text {
 
 component Banner.Buttons {
   style base {
+    gap: 12px;
+    
     > button {
-      background-color: var(--tint);
+      color: var(--tint);
+      border-color: var(--tint);
+      border-style: solid;
+      border-width: 2px;
+      background-color: transparent;
     }
   }
   
   fun render: Html {
-    <div::base style={Ui.Styles:ROW}>
+    <div::base style={Ui.Styles:FLEX}>
       <Ui.Button
         iconBefore={Ui.Icons:ORGANIZATION}
         label="Client Work"/>
