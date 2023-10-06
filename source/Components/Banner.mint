@@ -1,5 +1,5 @@
 component Banner {
-  style base {
+  style content {
     width: 2000px;
     height: 500px;
     padding: 32px;
@@ -7,7 +7,7 @@ component Banner {
   
   fun render: Html {
     <div style={Ui.Flex:H}>
-      <div::base style={Ui.Flex:V}>
+      <div::content style={Ui.Flex:V}>
         <Banner.Text/>
         <Banner.Buttons/>
       </div>
