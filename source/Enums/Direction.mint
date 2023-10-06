@@ -4,14 +4,14 @@ enum Direction {
 }
 
 module Direction {
-  fun flexDirection(direction: Direction) {
+  fun flexDirection (direction : Direction) {
     case direction {
       Direction::Horizontal => "row"
       Direction::Vertical => "column"
     }
   }
 
-  fun alignItems(direction: Direction) {
+  fun alignItems (direction : Direction) {
     case direction {
       Direction::Horizontal => "center"
       Direction::Vertical => "start"

@@ -4,13 +4,14 @@ component Banner {
     height: 500px;
     padding: 32px;
   }
-  
-  fun render: Html {
+
+  fun render : Html {
     <div style={Ui.Flex:H}>
       <div::content style={Ui.Flex:V}>
         <Banner.Text/>
         <Banner.Buttons/>
       </div>
+
       <div style={Ui.Flex:V}>
         <img src={@asset(../../assets/apps.png)}/>
       </div>
@@ -19,18 +20,19 @@ component Banner {
 }
 
 component Banner.Text {
-  fun render: Html {
+  fun render : Html {
     <>
-      <h1>
-        "Apps built to flourish."
-      </h1>
-      <{<<#MARKDOWN
+      <h1>"Apps built to flourish."</h1>
+
+      <{
+        <<#MARKDOWN
         From startups to Fortune 500 companies, Fleuronic has a **proven track record**
         in mobile software development. We work with your team to deliver your dream,
         from start to finish and beyond.
         
         Take a look at what we’ve done so far.
-        MARKDOWN}>
+        MARKDOWN
+      }>
     </>
   }
 }
@@ -38,7 +40,7 @@ component Banner.Text {
 component Banner.Buttons {
   style base {
     gap: var(--spacing);
-    
+
     > button {
       color: var(--tint);
       border-color: var(--tint);
@@ -47,15 +49,16 @@ component Banner.Buttons {
       background-color: transparent;
     }
   }
-  
-  fun render: Html {
+
+  fun render : Html {
     <div::base style={Ui.Flex:H}>
       <Ui.Button
         iconBefore={Ui.Icons:ORGANIZATION}
         label="Client Work"/>
+
       <Ui.Button
         iconBefore={Ui.Icons:OCTOFACE}
         label="Open Source"/>
-    </div> 
+    </div>
   }
 }
