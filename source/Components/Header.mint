@@ -13,6 +13,11 @@ component Header {
     > button {
       text-transform: inherit;
       background-color: var(--tint);
+
+      &:hover {
+        background-color: var(--tint);
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+      }
     }
   }
 

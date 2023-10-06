@@ -47,6 +47,11 @@ component Banner.Buttons {
       border-style: solid;
       border-width: 2px;
       background-color: transparent;
+
+      &:hover {
+        color: var(--primary-text);
+        background-color: var(--tint-light);
+      }
     }
   }
 
