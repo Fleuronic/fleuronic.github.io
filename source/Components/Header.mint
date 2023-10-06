@@ -1,11 +1,13 @@
 component Header {
-	const SIZE = 14
-	
 	style base {
 		color: var(--tint);
     text-transform: uppercase;
-		padding: 18px 16px 24px 32px;		
-	}	
+		padding: 18px 16px 24px 32px;
+	}
+  
+  style brand {
+    width: 16vw;
+  }
 	
 	style button {
 		> button {
@@ -17,9 +19,9 @@ component Header {
 	get brand {
     <Ui.Brand
       icon={
-        <img 
-          src={@asset(../../assets/icon_wordmark.png)} 
-          style="width: 16vw;"/>}
+        <div::brand>
+          <img src={@asset(../../assets/icon_wordmark.png)}/>
+        </div>}
       href="/"/>
 	}
 

@@ -6,12 +6,12 @@ component Banner {
   }
   
   fun render: Html {
-    <div style={Ui.Styles.flex(Direction::Horizontal)}>
-      <div::base style={Ui.Styles.flex(Direction::Vertical)}>
+    <div style={Ui.Flex:H}>
+      <div::base style={Ui.Flex:V}>
         <Banner.Text/>
         <Banner.Buttons/>
       </div>
-      <div style={Ui.Styles.flex(Direction::Vertical)}>
+      <div style={Ui.Flex:V}>
         <img src={@asset(../../assets/apps.png)}/>
       </div>
     </div>
@@ -37,7 +37,7 @@ component Banner.Text {
 
 component Banner.Buttons {
   style base {
-    gap: 12px;
+    gap: var(--spacing);
     
     > button {
       color: var(--tint);
@@ -49,7 +49,7 @@ component Banner.Buttons {
   }
   
   fun render: Html {
-    <div::base style={Ui.Styles:FLEX}>
+    <div::base style={Ui.Flex:H}>
       <Ui.Button
         iconBefore={Ui.Icons:ORGANIZATION}
         label="Client Work"/>
