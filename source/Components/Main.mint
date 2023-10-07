@@ -1,10 +1,11 @@
 component Main {
   const TOKENS =
     [
-      {["tint"], Ui.Colors:FLEURONIC_BLUE},
-      {["primary-text"], Ui.Colors:WHITE},
-      {["background-text", "primary-color"], Ui.Colors:DARK_GRAY},
-      {["spacing"], Ui.Spacing:DEFAULT}
+      {["tint"], Colors.fleuronicBlue()},
+      {["tint-light"], Colors.fleuronicBlue(light: true)},
+      {["primary-text"], Colors.white()},
+      {["background-text", "primary-color"], Colors.darkGray()},
+      {["spacing"], Spacing.default()}
     ]
     |> Tokens.set
 

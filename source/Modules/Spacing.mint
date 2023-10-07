@@ -1,3 +1,7 @@
-module Ui.Spacing {
-  const DEFAULT = "12px"
+module Spacing {
+  const DEFAULT = 12
+
+  fun default {
+    "#{DEFAULT}px"
+  }
 }
