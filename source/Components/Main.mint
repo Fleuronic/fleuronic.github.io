@@ -5,7 +5,8 @@ component Main {
       {["tint-light"], Colors.fleuronicBlue(light: true)},
       {["primary-text"], Colors.white()},
       {["background-text", "primary-color"], Colors.darkGray()},
-      {["spacing"], Spacing.default()}
+      {["spacing"], Spacing.default()},
+      {["border-width"], Border.Width.default()}
     ]
     |> Tokens.set
 
