@@ -1,6 +1,6 @@
 component Main {
   connect Application exposing { page }
-  
+
   const TOKENS =
     [
       {["tint"], Colors.fleuronicBlue()},
