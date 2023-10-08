@@ -1,4 +1,6 @@
 component Main {
+  connect Application exposing { page }
+  
   const TOKENS =
     [
       {["tint"], Colors.fleuronicBlue()},
@@ -16,7 +18,13 @@ component Main {
       tokens={TOKENS}>
 
       <Header/>
-      <Banner/>
+
+      case page {
+        Page::Home => <Page.Home/>
+        Page::About => <Page.About/>
+        Page::Services => <Page.About/>
+        Page::Blog => <Page.About/>
+      }
 
     </Ui.Theme.Root>
   }

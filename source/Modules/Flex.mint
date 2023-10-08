@@ -3,10 +3,16 @@ module Ui.Flex {
   const V = flex(direction: Direction::Vertical)
 
   fun flex (direction : Direction) {
+    let {flexDirection, alignItems} =
+      case direction {
+        Direction::Horizontal => {"row", "center"}
+        Direction::Vertical => {"column", "start"}
+      }
+
     Map.empty()
     |> Map.set("display", "flex")
     |> Map.set("justify-content", "center")
-    |> Map.set("flex-direction", Direction.flexDirection(direction))
-    |> Map.set("align-items", Direction.alignItems(direction))
+    |> Map.set("flex-direction", flexDirection)
+    |> Map.set("align-items", alignItems)
   }
 }
