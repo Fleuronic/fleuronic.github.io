@@ -1,6 +1,6 @@
 component Main {
   connect Application exposing { page }
-
+  
   const TOKENS =
     [
       {["tint"], Colors.fleuronicBlue()},
@@ -8,6 +8,7 @@ component Main {
       {["primary-text"], Colors.white()},
       {["background-text", "primary-color"], Colors.darkGray()},
       {["spacing"], Spacing.default()},
+      {["padding"], Inset.large()},
       {["border-width"], Border.Width.default()}
     ]
     |> Tokens.set
