@@ -2,12 +2,13 @@ component Main {
   connect Application exposing { page }
 
   fun render : Html {
+    let tokens =
+      Theme:LIGHT
+      |> Token.list
+    
     <Ui.Theme.Root
       fontConfiguration={Ui:DEFAULT_FONT_CONFIGURATION}
-      tokens={
-        Theme:LIGHT
-        |> Token.list
-      }>
+      tokens={tokens}>
 
       <Header/>
 
