@@ -1,6 +1,6 @@
-module Tokens {
-  fun set (tokens : Array(Tuple(Array(String), String))) {
-    tokens
+module Token {
+  fun list (theme : Array(Tuple(Array(String), String))) {
+    theme
     |> Map.fromArray
     |> Map.map(
       (names : Array(String), value : String) {
