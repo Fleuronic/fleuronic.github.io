@@ -4,10 +4,20 @@ component Footer {
     text-align: center;
   }
 
+  get copyright {
+    let year =
+      Time.year(Time.now())
+
+    "Copyright © #{year} Fleuronic LLC."
+  }
+
+  get rights {
+    "All rights reserved."
+  }
+
   fun render : Html {
     <div::base>
-      "Copyright © #{Time.year(Time.now())} Fleuronic LLC. All " \
-      "rights reserved."
+      "#{copyright} #{rights}"
     </div>
   }
 }
