@@ -18,7 +18,7 @@ component Portfolio {
       <div::section id="client_work">
         <Ui.Content>
           <h2>"Client Work"</h2>
-          <p>"Here are some projects we’ve developed for clients."</p>
+          <p>"Here are some projects we’ve developed or contributed to for clients."</p>
         </Ui.Content>
 
         <Ui.Grid gap={Ui.Size::Em(2)}>
