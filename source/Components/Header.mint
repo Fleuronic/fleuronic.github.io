@@ -16,7 +16,7 @@ component Header {
 
       &:hover {
         background-color: var(--tint);
-        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+        box-shadow: 0 3px 10px var(--shadow-color);
       }
     }
   }
@@ -61,7 +61,9 @@ component Header {
   get contactItem {
     Ui.NavItem::Html(
       <div::button>
-        <Ui.Button label="Get in Touch"/>
+        <Ui.Button
+          label="Get in Touch"
+          href="mailto:jordan@fleuronic.com"/>
       </div>)
   }
 

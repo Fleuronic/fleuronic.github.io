@@ -1,15 +1,11 @@
-enum Unit {
-  Pixel
-}
-
 module Unit {
-  fun pixels (value : Number) {
-    "#{value}#{string(Unit::Pixel)}"
+  fun ems (value : Number) {
+    Ui.Size::Em(value)
+    |> Ui.Size.toString
   }
 
-  fun string (unit : Unit) {
-    case unit {
-      Unit::Pixel => "px"
-    }
+  fun pixels (value : Number) {
+    Ui.Size::Px(value)
+    |> Ui.Size.toString
   }
 }

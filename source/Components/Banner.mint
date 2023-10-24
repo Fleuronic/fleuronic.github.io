@@ -1,7 +1,6 @@
 component Banner {
   style content {
     width: 1600px;
-    height: 500px;
     padding: 32px;
   }
 
@@ -39,7 +38,7 @@ component Banner.Text {
 
 component Banner.Buttons {
   style base {
-    gap: var(--spacing);
+    gap: var(--button-spacing);
 
     > button {
       color: var(--tint);
@@ -59,11 +58,21 @@ component Banner.Buttons {
     <div::base style={Ui.Flex:H}>
       <Ui.Button
         iconBefore={Ui.Icons:ORGANIZATION}
-        label="Client Work"/>
+        label="Client Work"
+        onClick={scrollToClientWork}/>
 
       <Ui.Button
         iconBefore={Ui.Icons:OCTOFACE}
-        label="Open Source"/>
+        label="Open Source"
+        onClick={scrollToOpenSource}/>
     </div>
+  }
+  
+  fun scrollToClientWork (event : Html.Event) {
+    `document.getElementById('client_work').scrollIntoView()`
+  }
+
+  fun scrollToOpenSource (event : Html.Event) {
+    `document.getElementById('open_source').scrollIntoView()`
   }
 }

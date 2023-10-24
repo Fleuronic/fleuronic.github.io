@@ -16,8 +16,6 @@ component Footer {
   }
 
   fun render : Html {
-    <div::base>
-      "#{copyright} #{rights}"
-    </div>
+    <div::base>"#{copyright} #{rights}"</div>
   }
 }
